@@ -1,0 +1,35 @@
+Tecnologias e Bibliotecas Usadas
+
+    ChatterBot:
+        A primeira abordagem para implementar o chatbot foi com a biblioteca ChatterBot. Essa biblioteca facilita a criação de chatbots capazes de aprender com as interações, utilizando um modelo baseado em aprendizado de máquina. A ideia inicial foi utilizar a funcionalidade de "melhor correspondência" (BestMatch) do ChatterBot para selecionar as respostas mais apropriadas às perguntas do usuário.
+        ChatterBotCorpusTrainer foi utilizado para treinar Amanda com um corpus em português, garantindo que ela fosse capaz de responder adequadamente às interações em nosso idioma.
+
+    Transformers (Hugging Face):
+        Para aumentar a capacidade de Amanda de gerar respostas mais naturais e com contexto, o projeto foi refeito utilizando o modelo DialoGPT, da Hugging Face. DialoGPT é um modelo de linguagem treinado para gerar respostas em conversas, baseado na arquitetura GPT-2. Esse modelo foi escolhido devido à sua habilidade de gerar textos coerentes e contextualmente relevantes, o que o torna ideal para interações de chat.
+        A biblioteca Transformers, da Hugging Face, foi utilizada para carregar e utilizar o modelo DialoGPT para responder às perguntas do usuário. O modelo foi integrado com a funcionalidade de histórico de conversa, o que permite que Amanda se lembre do contexto da interação anterior e forneça respostas mais personalizadas.
+
+    PyTorch:
+        A biblioteca PyTorch foi necessária para carregar o modelo de aprendizado profundo e realizar o processamento das interações. Sem o PyTorch, não seria possível utilizar os modelos da Hugging Face de forma eficiente, pois é uma das principais dependências para o funcionamento de modelos baseados em aprendizado profundo.
+
+    Python:
+        O projeto foi desenvolvido utilizando Python, uma linguagem de programação muito utilizada em projetos de IA devido à sua simplicidade e grande suporte a bibliotecas de aprendizado de máquina e processamento de linguagem natural.
+
+Como Funciona o Projeto
+
+O funcionamento do chatbot é simples, mas poderoso. Quando iniciado, Amanda se apresenta e começa a interagir com o usuário. A cada interação, a entrada do usuário é processada pelo modelo de IA, que gera uma resposta baseada no contexto e nas informações fornecidas durante a conversa. O histórico de interações é mantido para melhorar a continuidade das conversas.
+
+    Treinamento com o ChatterBot: Inicialmente, Amanda foi treinada com um corpus em português, o que permite que ela entenda e responda de maneira coerente em nosso idioma.
+    Uso do DialoGPT: Para aprimorar as respostas, o modelo DialoGPT é utilizado. Ele gera respostas baseadas em aprendizado profundo, garantindo que a conversa tenha um tom mais fluido e natural.
+    Interação em Tempo Real: O sistema foi projetado para ser executado em tempo real, com Amanda respondendo imediatamente às perguntas ou interações do usuário. Quando o usuário digita "sair" ou "tchau", a conversa é encerrada.
+
+Objetivos Futuro e Expansão
+
+Embora o projeto tenha sido uma implementação inicial, há planos de expandir Amanda com funcionalidades mais avançadas. Alguns possíveis aprimoramentos incluem:
+
+    Aprendizado Contínuo: Amanda poderia aprender com cada nova interação, personalizando ainda mais suas respostas de acordo com as preferências e o comportamento do usuário.
+    Integração com Avatares 3D: Amanda poderia ser representada por um avatar em 3D, o que tornaria a experiência ainda mais imersiva e visual.
+    Aprimoramento da Inteligência Emocional: Trabalhar para que Amanda reconheça emoções do usuário e adapte suas respostas de forma empática.
+
+Conclusão
+
+O projeto Amanda foi criado para explorar a construção de uma namorada virtual interativa e empática, utilizando IA avançada. A combinação de ChatterBot e DialoGPT ajudou a criar um chatbot capaz de entender e responder de forma inteligente a uma vasta gama de perguntas, proporcionando uma experiência divertida e envolvente. Com o uso de PyTorch e Transformers, a Amanda oferece um sistema de IA conversacional com grande potencial para ser expandido e aprimorado no futuro.
